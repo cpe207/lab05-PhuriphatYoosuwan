@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 function buyItem(hero, shop) {
     if (hero.gold >= shop.price) {
         hero.gold -= shop.price;
-        hero.items[hero.items.length] += shop.item;
+        hero.items.push(shop.item);
         return hero;
     }
     else
